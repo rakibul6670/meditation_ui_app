@@ -23,6 +23,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
   //===============current index ===================
   int _currentIndex = 0;
 
+  //-------------------Selected screen -------------
+  int selectedScreen = 0;
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -71,33 +74,41 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     itemCount: tabList.length,
                     itemBuilder: (context, index) {
                       final tab = tabList[index];
-                      return Column(
-                        children: [
-                          //---------------Box ------------
-                          Container(
-                            height: 65,
-                            width: 65,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-
-                              color: Color(0xff586894),
-                            ),
-                            child: Center(
-                              child: Image.asset(
-                                "${tab["img"]}",
-                                height: 25,
-                                width: 25,
-                                fit: BoxFit.cover,
+                      return GestureDetector(
+                        onTap: () {
+                          selectedScreen =index;
+                          setState(() {
+                            
+                          });
+                        },
+                        child: Column(
+                          children: [
+                            //---------------Box ------------
+                            Container(
+                              height: 65,
+                              width: 65,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                        
+                                color:selectedScreen == index? Color(0xff8e97fd): Color(0xff586894),
+                              ),
+                              child: Center(
+                                child: Image.asset(
+                                  "${tab["img"]}",
+                                  height: 25,
+                                  width: 25,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
-                          ),
-
-                          //---------------------------Boxt Title-------
-                          Text(
-                            tab["title"].toString(),
-                            style: textTheme.titleMedium,
-                          ),
-                        ],
+                        
+                            //---------------------------Boxt Title-------
+                            Text(
+                              tab["title"].toString(),
+                              style: textTheme.titleMedium,
+                            ),
+                          ],
+                        ),
                       );
                     },
                     separatorBuilder: (context, index) {
@@ -108,83 +119,28 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                 //----------------------------Cover Box Section----------------
                 AppSpacing.v15,
-                Expanded(child: AllTapScreen()),
+                
+                Expanded(
+                  child: IndexedStack(
+                    index: selectedScreen,
+                    children: [
+                      AllTapScreen(),
+                      SingleChildScrollView(child: Container(color: Colors.blue,)),
+                      SingleChildScrollView(child: Container(color: Colors.grey,)),
+                      SingleChildScrollView(child: Container(color: Colors.amber,)),
+                      SingleChildScrollView(child: Container(color: Colors.deepOrange,)),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
         ),
       ),
 
-      //========================== Bottom Navigation Bar ======================
-      bottomNavigationBar: BottomNavigationBar(
-        
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white70,
-        currentIndex: _currentIndex,
-        onTap: (value) {
-          setState(() {
-            _currentIndex = value;
-          });
-        },
-
-        items: [
-          BottomNavigationBarItem(icon: Container(
-      height: 46,
-      width: 46,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        color: _currentIndex == 0? Color(0xff8e97fd) : Color(0xff03174d),
-      ),
-
-      child:Icon(Icons.home,size: ,))
-
-
-          /*
-          //-------------------------Home -------------
-          BottomNavigationBarItem(
-            icon: BottomNavBarContainer(
-              imagePath: AssetsImagesPath.home,
-              isSelected: _currentIndex == 0 ? true : false,
-            ),
-            label: "Home",
-          ),
-          //------------------------- Sleep --------------
-          BottomNavigationBarItem(
-            icon: BottomNavBarContainer(
-              imagePath: AssetsImagesPath.sleepNav,
-              isSelected: _currentIndex == 1 ? true : false,
-            ),
-            label: "Sleep",
-          ),
-          //---------------------- Meditate ----------------------------
-          BottomNavigationBarItem(
-            icon: BottomNavBarContainer(
-              imagePath: AssetsImagesPath.meditate,
-              isSelected: _currentIndex == 2 ? true : false,
-            ),
-            label: "Meditate",
-          ),
-          //-------------- Music ------------
-          BottomNavigationBarItem(
-            icon: BottomNavBarContainer(
-              imagePath: AssetsImagesPath.music,
-              isSelected: _currentIndex == 3 ? true : false,
-            ),
-            label: "Music",
-          ),
-
-          //----------------- Afsar ----------------
-          BottomNavigationBarItem(
-            icon: BottomNavBarContainer(
-              imagePath: AssetsImagesPath.afser,
-              isSelected: _currentIndex == 4 ? true : false,
-            ),
-            label: "Home",
-          ),
-        */
-
-        ],
-      ),
+     
+    
+    
     );
   }
 }

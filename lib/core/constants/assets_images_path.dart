@@ -16,5 +16,10 @@ class AssetsImagesPath {
   static final String meditate = "assets/images/meditate.png";
   static final String music = "assets/images/music.png";
   static final String afser = "assets/images/afser.png";
+
+
+  //-------------------- Music Card ---------
+  static final String nightIsland ="assets/images/night_island.png";
+  static final String sweetSleep ="assets/images/sweet_sleep.pn/";
   
 }
