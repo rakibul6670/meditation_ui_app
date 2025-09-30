@@ -19,5 +19,19 @@ class AssetsImagesPath {
   static final String focus = "assets/images/focus.png";
   static final String happiness = "assets/images/happiness.png";
 
+<<<<<<< HEAD
+=======
+  //-----------------Bottom Navigation bar image ------------
+  static final String home = "assets/images/home.png";
+  static final String sleepNav = "assets/images/sleep_nav.png";
+  static final String meditate = "assets/images/meditate.png";
+  static final String music = "assets/images/music.png";
+  static final String afser = "assets/images/afser.png";
+
+
+  //-------------------- Music Card ---------
+  static final String nightIsland ="assets/images/night_island.png";
+  static final String sweetSleep ="assets/images/sweet_sleep.pn/";
+>>>>>>> 370cc51dc0145cb990069fbdb8351bccf7f7301b
   
 }
