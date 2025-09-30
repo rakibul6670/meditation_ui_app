@@ -10,11 +10,13 @@ class AppSpacing {
   static SizedBox v105 = SizedBox(height: 105);
 
   static SizedBox v86 = SizedBox(height: 86);
+  static SizedBox v60 = SizedBox(height: 60,);
   static SizedBox v55 = SizedBox(height: 55,);
   static SizedBox v50 = SizedBox(height: 50,);
   static SizedBox v40 = SizedBox(height: 40,);
 
   static SizedBox v34 = SizedBox(height: 34);
+  static SizedBox v35 = SizedBox(height: 35);
 
   static SizedBox v32 = SizedBox(height: 32);
 
@@ -28,7 +30,13 @@ class AppSpacing {
 
   static SizedBox v5 = SizedBox(height: 5);
 
+
+
+
+
+
  //============================ Horizontal Spacing =================
+  static SizedBox h56 = SizedBox(width: 56,);
   static SizedBox h20 = SizedBox(width: 20,);
   static SizedBox h15 = SizedBox(width: 15);
 

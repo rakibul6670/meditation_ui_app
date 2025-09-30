@@ -9,6 +9,21 @@ class AssetsIconsPath {
   static final String play = "assets/icons/play.png";
 
 
+  static final String back = "assets/icons/back.png";
+  static final String download = "assets/icons/download.png";
+  static final String favorites = "assets/icons/favorites.png";
+  static final String listening = "assets/icons/listening.png";
+  static final String love = "assets/icons/love.png";
+  static final String close = "assets/icons/close.png";
+
+
+  //----------------------Music Play Screen -----------
+  static final String musicPlayButton = "assets/icons/music_play_button.png";
+  static final String musicForward = "assets/icons/music_forward.png";
+  static final String musicRewind = "assets/icons/musicRewind.png";
+
+
+
   //-----------------Bottom Navigation bar Icon Images ------------
   // static final String home = "assets/icons/home.png";
   // static final String sleepNav = "assets/icons/sleep_nav.png";

@@ -6,6 +6,7 @@ class AssetsImagesPath {
   static final String startButton = "assets/images/start.png";
   static final String nightIsland = "assets/images/night_island.png";
   static final String moonClouds = "assets/images/moon_clouds.png";
+
   static final String goodNight = "assets/images/goog_night.png";
   static final String sweetSleep = "assets/images/sweet_sleep.png";
 
@@ -19,19 +20,25 @@ class AssetsImagesPath {
   static final String focus = "assets/images/focus.png";
   static final String happiness = "assets/images/happiness.png";
 
-<<<<<<< HEAD
-=======
+
+  //================ Music Play screen Background image ============
+
+  static final String musicBallBox = "assets/images/music_ball_box.png";
+  static final String musicBottomLeftShape = "assets/images/music_bottom_left.png";
+  static final String musicBottomRightShape = "assets/images/music_bottom_right.png";
+  static final String musicTopShape = "assets/images/music_shape_top.png";
+
+
+
+
+
   //-----------------Bottom Navigation bar image ------------
-  static final String home = "assets/images/home.png";
-  static final String sleepNav = "assets/images/sleep_nav.png";
-  static final String meditate = "assets/images/meditate.png";
-  static final String music = "assets/images/music.png";
-  static final String afser = "assets/images/afser.png";
+  // static final String home = "assets/images/home.png";
+  // static final String sleepNav = "assets/images/sleep_nav.png";
+  // static final String meditate = "assets/images/meditate.png";
+  // static final String music = "assets/images/music.png";
+  // static final String afser = "assets/images/afser.png";
 
 
-  //-------------------- Music Card ---------
-  static final String nightIsland ="assets/images/night_island.png";
-  static final String sweetSleep ="assets/images/sweet_sleep.pn/";
->>>>>>> 370cc51dc0145cb990069fbdb8351bccf7f7301b
   
 }

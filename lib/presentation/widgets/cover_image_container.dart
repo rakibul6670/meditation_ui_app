@@ -14,7 +14,7 @@ class CoverImageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      //padding: EdgeInsets.all(20),
       height: 233,
       width: double.maxFinite,
       decoration: BoxDecoration(
@@ -35,8 +35,9 @@ class CoverImageContainer extends StatelessWidget {
             style: textTheme.titleMedium,
           ),
           
-          AppSpacing.v32,
+
           //------------------------Start image button---------------
+          AppSpacing.v35,
           GestureDetector(
             onTap: () {},
             child: Image.asset(
@@ -46,6 +47,8 @@ class CoverImageContainer extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+
+
         ],
       ),
     
