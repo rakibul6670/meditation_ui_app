@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
-import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/presentation/widgets/music_card.dart';
 import '../widgets/cover_image_container.dart';
 

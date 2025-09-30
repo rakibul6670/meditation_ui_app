@@ -12,7 +12,7 @@ class MusicDetailsScreen extends StatelessWidget {
         child: Column(children: [
 
           Container(
-            height: ,
+
           )
 
         ],),
