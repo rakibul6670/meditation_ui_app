@@ -59,17 +59,10 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
                   onPressed: () {
                      Navigator.pushNamedAndRemoveUntil(
                         context,
-                        AppRoutes.loginScreen,
+                        AppRoutes.signupScreen,
                         (route) => false,
                       );
-                    // if(!mounted)return;
-                    // WidgetsBinding.instance.addPostFrameCallback((_) {
-                    //   Navigator.pushNamedAndRemoveUntil(
-                    //     context,
-                    //     AppRoutes.loginScreen,
-                    //     (route) => false,
-                    //   );
-                    // });
+                   
                   },
 
                   child: Text("Sign up"),
@@ -84,16 +77,10 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
                 onTap: () {
                    Navigator.pushNamedAndRemoveUntil(
                         context,
-                        AppRoutes.signupScreen,
+                        AppRoutes.loginScreen,
                         (route) => false,
                       );
-                  // WidgetsBinding.instance.addPostFrameCallback((_) {
-                  //   Navigator.pushNamedAndRemoveUntil(
-                  //     context,
-                  //     AppRoutes.signupScreen,
-                  //     (route) => false,
-                  //   );
-                  // });
+                
                 },
 
                 child: RichText(

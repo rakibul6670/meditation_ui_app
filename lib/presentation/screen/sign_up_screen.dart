@@ -48,20 +48,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         AppRoutes.loginScreen,
                         (route) => false,
                       );
-                      // WidgetsBinding.instance.addPostFrameCallback((_) {
-                      //   Navigator.pushNamedAndRemoveUntil(
-                      //     context,
-                      //     AppRoutes.loginScreen,
-                      //     (route) => false,
-                      //   );
-                      // });
+                      
                     },
 
                     child: Image.asset(AssetsIconsPath.back),
                   ),
                 ),
 
-                SizedBox(height: 133),
+                SizedBox(height: 33),
 
                 //=================== Title ===================
                 Text(

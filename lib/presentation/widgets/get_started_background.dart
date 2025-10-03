@@ -15,33 +15,7 @@ class GetStartedBackground extends StatelessWidget {
         children: [
 
           
-          //===================== Title ==================
-          Positioned(
-            top: 51,
-            left: 0,
-            right: 0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              spacing: 10,
-              children: [
-                //---------------------Silent Text --------------
-                Text(
-                  "Silent",
-                  style: textTheme.titleMedium!.copyWith(color: Colors.black),
-                ),
-
-                //-------------------Icon -------------
-                Image.asset(AssetsIconsPath.logo, height: 30, width: 30),
-
-                //----------------------Moon Text------------------
-                Text(
-                  "Moon",
-                  style: textTheme.titleMedium!.copyWith(color: Colors.black),
-                ),
-              ],
-            ),
-          ),
-           
+          
            //===========================Small Circle left ================
            Positioned(
             top: 346,

@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
+import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/presentation/widgets/custom_elevated_button.dart';
 import 'package:meditation_ui_app/presentation/widgets/day_select_container.dart';
-
 
 class ReminderScreen extends StatefulWidget {
   const ReminderScreen({super.key});
@@ -14,20 +13,13 @@ class ReminderScreen extends StatefulWidget {
 }
 
 class _ReminderScreenState extends State<ReminderScreen> {
-
- 
-
- //====================== Days List ======================
+  //====================== Days List ======================
   List<String> days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
   //================= days Selected list ================
-  List<bool> selected = List.filled(7, false); 
+  List<bool> selected = List.filled(7, false);
 
   //================= Date Time =====================
   DateTime _time = DateTime.now();
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -79,11 +71,10 @@ class _ReminderScreenState extends State<ReminderScreen> {
 
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
+
                     //mainAxisAlignment: MainAxisAlignment.center,
-                    
                     children: [
-                   //  Divider(color: Colors.white),
-                     
+                      //  Divider(color: Colors.white),
                       TimePickerSpinner(
                         alignment: Alignment.center,
                         is24HourMode: false,
@@ -93,28 +84,26 @@ class _ReminderScreenState extends State<ReminderScreen> {
                           fontFamily: "HelveticaNeue",
                           fontWeight: FontWeight.w400,
                         ),
-                        highlightedTextStyle:  TextStyle(
+                        highlightedTextStyle: TextStyle(
                           color: Color(0xff263238),
                           fontSize: 24,
                           fontFamily: "HelveticaNeue",
                           fontWeight: FontWeight.w700,
                         ),
-                        
+
                         itemHeight: 60,
                         spacing: 40,
 
                         isForce2Digits: true,
                         itemWidth: 50,
-                        onTimeChange: (time){
+                        onTimeChange: (time) {
                           setState(() {
                             _time = time;
                           });
                         },
-                       
                       ),
 
-
-                    //  Divider(color: Colors.white),
+                      //  Divider(color: Colors.white),
                     ],
                   ),
                 ),
@@ -159,11 +148,17 @@ class _ReminderScreenState extends State<ReminderScreen> {
                   ),
                 ),
 
-              
                 AppSpacing.v57,
 
                 //====================== Save Button ======================
-                CustomElevatedButton(onPressed: () {}, buttonName: "Save"),
+                CustomElevatedButton(
+                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    AppRoutes.dashboardScreen,
+                    (predicate) => false,
+                  ),
+                  buttonName: "Save",
+                ),
 
                 //========================= No Thanks Button ================
                 AppSpacing.v20,
@@ -179,10 +174,9 @@ class _ReminderScreenState extends State<ReminderScreen> {
                     ),
                   ),
                 ),
-                
+
                 //=============== space ===============
                 AppSpacing.v60,
-              
               ],
             ),
           ),

@@ -15,7 +15,9 @@ class MeditationUiApp extends StatelessWidget {
      initialRoute: AppRoutes.initialScreen,
      routes: AppPages.routes,
      
-     theme: AppTheme.darkTheme,
+     theme: AppTheme.lightTheme,
+     darkTheme: AppTheme.darkTheme,
+     themeMode: ThemeMode.system,
 
 
     );

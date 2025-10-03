@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                SizedBox(height: 133),
+                SizedBox(height: 33),
 
                 //=================== Title ===================
                 Text(
@@ -128,8 +128,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 SizedBox(height: 20),
 
-                //forgot password
-                //104
+                //=========================== Forgot password ===========
+                Center(child: Text("Forgot password")),
+
+                AppSpacing.v105,
 
                 //================ Link text =======================
                 GestureDetector(
