@@ -36,9 +36,14 @@ class AssetsImagesPath {
   static final String lightSignUpImage = "assets/images/light_signup_image.png";
   static final String lightSignUpWelcome = "assets/images/light_signup_welcome.png";
   static final String lightSignUpRectangle = "assets/images/light_signup_rectangle.png";
+
   static final String loginBackground = "assets/images/login_background.png";
   static final String getStartMan = "assets/images/light_welcome_image.png";
   static final String bird = "assets/images/bird.png";
+
+  static final String ChooseTopicScreenBackground = "assets/images/choose_topic_background.png";
+
+
 
 
 

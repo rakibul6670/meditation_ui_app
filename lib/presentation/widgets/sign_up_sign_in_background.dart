@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meditation_ui_app/core/utils/app_responsive.dart';
 
 import '../../core/constants/assets_icons_path.dart';
 import '../../core/constants/assets_images_path.dart';

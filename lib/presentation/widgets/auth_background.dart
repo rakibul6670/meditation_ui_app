@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import '../../core/constants/assets_images_path.dart';
 
 class AuthBackground extends StatelessWidget {

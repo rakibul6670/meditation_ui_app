@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: 10.9.1  
+  #this package for show watch time spinner 
+  flutter_time_picker_spinner: ^2.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

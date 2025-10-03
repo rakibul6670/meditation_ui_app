@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/presentation/widgets/get_started_background.dart';
 
@@ -54,12 +55,13 @@ class GetStartedScreen extends StatelessWidget {
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,                                           
                 ),
-                onPressed: (){},
+                onPressed: ()=> Navigator.pushNamedAndRemoveUntil(context, AppRoutes.reminderScreen, (predicate)=> false),
                  child: Text("GET STARTED")
                  ),
              ),
 
               //SizedBox(height: 118,),
+              SizedBox(height: 80,),
             
             ],
           ),

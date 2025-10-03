@@ -113,6 +113,8 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
                   ),
                 ),
               ),
+              SizedBox(height: 80,),
+            
             ],
           ),
         ),

@@ -13,16 +13,19 @@ class ScreenBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+    
       child: Container(
+      
         height: double.maxFinite,
         width: double.maxFinite,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imagePath),
+        
             fit: BoxFit.cover,
           ),
         ),
-        child: child,
+        child: Align(alignment: Alignment.topLeft, child: child),
       ),
     );
   }
