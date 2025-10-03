@@ -11,30 +11,27 @@ class MusicCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          //-----------------Image -----------------
-          Image.asset(
-            imagePath,
-            height: 122,
-            width: 177,
-            fit: BoxFit.cover,
-          ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        //-----------------Image -----------------
+        Image.asset(
+          imagePath,
+          height: 122,
+          width: 177,
+          fit: BoxFit.cover,
+        ),
 
-          //----------------------Card title ----------------
-          AppSpacing.v10,
+        //----------------------Card title ----------------
+        AppSpacing.v10,
 
-          Text(title, style: TextStyle(color: Colors.white)),
+        Text(title, style: TextStyle(color: Colors.white)),
 
-          Text(
-           time,
-            style: TextStyle(color: Colors.white70),
-          ),
-        ],
-      ),
+        Text(
+         time,
+          style: TextStyle(color: Colors.white70),
+        ),
+      ],
     );
   }
 }

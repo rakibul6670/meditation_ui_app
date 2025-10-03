@@ -3,6 +3,7 @@ import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
+import 'package:meditation_ui_app/presentation/screen/music_details_screen.dart';
 import 'package:meditation_ui_app/presentation/widgets/banner_container_box.dart';
 import 'package:meditation_ui_app/presentation/widgets/music_card.dart';
 
@@ -77,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                 AppSpacing.v20,
           
                 SizedBox(
-                  height: 192,
+                  height: 200,
                   child: ListView.separated(
                     // shrinkWrap: true,
                     // physics: NeverScrollableScrollPhysics(),
@@ -86,13 +87,12 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: (){
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> MusicDetailsScreen()));
+
+
                           Navigator.pushNamed(
                               context, AppRoutes.musicDetailsScreen,
-                             // arguments: {
-                             //    "img":AssetsImagesPath.nightIsland,
-                             //   "title":'Night Island',
-                             //   "time":"45 MIN SLEEP MUSIC"
-                             // },
                           );
 
                         },

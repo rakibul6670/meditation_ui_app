@@ -30,15 +30,21 @@ class AssetsImagesPath {
 
 
 
+  static final String cloud = "assets/images/cloud.png";
+  static final String ellipse = "assets/images/ellipse.png";
+  static final String lightSignUpBackground = "assets/images/light_signup_background.png";
+  static final String lightSignUpImage = "assets/images/light_signup_image.png";
+  static final String lightSignUpWelcome = "assets/images/light_signup_welcome.png";
+  static final String lightSignUpRectangle = "assets/images/light_signup_rectangle.png";
+  static final String loginBackground = "assets/images/login_background.png";
+  static final String getStartMan = "assets/images/light_welcome_image.png";
+  static final String bird = "assets/images/bird.png";
 
 
-  //-----------------Bottom Navigation bar image ------------
-  // static final String home = "assets/images/home.png";
-  // static final String sleepNav = "assets/images/sleep_nav.png";
-  // static final String meditate = "assets/images/meditate.png";
-  // static final String music = "assets/images/music.png";
-  // static final String afser = "assets/images/afser.png";
 
 
-  
+
+
+
+
 }

@@ -20,7 +20,7 @@ class AssetsIconsPath {
   //----------------------Music Play Screen -----------
   static final String musicPlayButton = "assets/icons/music_play_button.png";
   static final String musicForward = "assets/icons/music_forward.png";
-  static final String musicRewind = "assets/icons/musicRewind.png";
+  static final String musicRewind = "assets/icons/music_rewind.png";
 
 
 

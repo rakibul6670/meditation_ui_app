@@ -8,7 +8,6 @@ class AppTheme {
 
     //-------------------Text Theme -------------
     textTheme: TextTheme(
-
       headlineMedium: TextStyle(
         fontSize: 34,
         fontWeight: FontWeight.w700,
@@ -51,10 +50,8 @@ class AppTheme {
         fontSize: 11,
         fontWeight: FontWeight.w400,
         color: Color(0xffebeaec),
-       // letterSpacing: 5,
+        // letterSpacing: 5,
       ),
-
-
     ),
 
     //--------------Bottom navigation bar theme ------------
@@ -63,24 +60,46 @@ class AppTheme {
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.white70,
     ),
-    
+
     //================== Elevated Button Style ===================
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          backgroundColor:Color(0xff8e97fd),
-          foregroundColor: Colors.white,
-          textStyle: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            fontFamily: "HelveticaNeue",
-            color: Color(0xffebeaec),
-          ),
+        backgroundColor: Color(0xff8e97fd),
+        foregroundColor: Colors.white,
+        textStyle: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          fontFamily: "HelveticaNeue",
+          color: Color(0xffebeaec),
+        ),
 
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(38),
-          )
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(38)),
       ),
-    )
-    
+    ),
+
+    //==================Input Field Theme ======================
+    inputDecorationTheme: InputDecorationThemeData(
+      
+      hintStyle: TextStyle(
+        color: Color(0xffA1A4B2),
+        fontFamily: "HelveticaNeue",
+        fontSize: 16,
+        fontWeight: FontWeight.w300,
+      ),
+      filled: true,
+      fillColor: Color(0xffF2F3F7),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide.none,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide.none,
+      ),
+    ),
+
+  //============================================================
+
+
   );
 }

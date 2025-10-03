@@ -179,7 +179,8 @@ class MusicDetailsScreen extends StatelessWidget {
           
                    ],
                  ),
-               )
+               ),
+               AppSpacing.v20,
           
           
           
