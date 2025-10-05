@@ -64,9 +64,17 @@ class _MusicPlayScreenState extends State<MusicPlayScreen> {
                         //e6e7f2
                         color: Color(0xffe6e7f2),
                         shape: BoxShape.circle,
+                        border: Border.all(color: Colors.grey,width: 7)
+                        ),
+                        
+
+
                         
                     
-                      ),
+                     
+                     
+
+
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -75,7 +83,7 @@ class _MusicPlayScreenState extends State<MusicPlayScreen> {
                         },
                         child: Icon(
                           isPlay ? Icons.play_circle : Icons.pause,
-                          color: Colors.white,
+                          color: Color(0xff3F414E),
                           size: 40,
                         ),
                       ),
