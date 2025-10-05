@@ -17,7 +17,7 @@ class MusicDetailsScreen extends StatelessWidget {
    // final Map? arg = ModalRoute.of(context)?.settings.arguments as Map;
 
     // fallback values
-    final String img =  AssetsImagesPath.nightIsland;
+    final String img =  AssetsImagesPath.musicDetailsCoverBg;
     final String title =  "Night Island";
     final String time =  "45 MIN SLEEP MUSIC";
 

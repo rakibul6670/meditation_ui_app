@@ -1,5 +1,4 @@
 class AssetsImagesPath {
-
   //--------------------------Images--------------------------------------------
   static final String dashboardBackground = "assets/images/background.png";
   static final String boxBackground = "assets/images/box_background.png";
@@ -10,7 +9,6 @@ class AssetsImagesPath {
   static final String goodNight = "assets/images/goog_night.png";
   static final String sweetSleep = "assets/images/sweet_sleep.png";
 
-
   static final String bannerBg = "assets/images/banner_bg.png";
   static final String basicSource = "assets/images/basic_source.png";
   static final String relaxation = "assets/images/relaxation.png";
@@ -20,57 +18,72 @@ class AssetsImagesPath {
   static final String focus = "assets/images/focus.png";
   static final String happiness = "assets/images/happiness.png";
 
-
   //================ Music Play screen Background image ============
 
   static final String musicBallBox = "assets/images/music_ball_box.png";
-  static final String musicBottomLeftShape = "assets/images/music_bottom_left.png";
-  static final String musicBottomRightShape = "assets/images/music_bottom_right.png";
+  static final String musicBottomLeftShape =
+      "assets/images/music_bottom_left.png";
+  static final String musicBottomRightShape =
+      "assets/images/music_bottom_right.png";
   static final String musicTopShape = "assets/images/music_shape_top.png";
-
-
 
   static final String cloud = "assets/images/cloud.png";
   static final String ellipse = "assets/images/ellipse.png";
-  static final String lightSignUpBackground = "assets/images/light_signup_background.png";
+  static final String lightSignUpBackground =
+      "assets/images/light_signup_background.png";
   static final String lightSignUpImage = "assets/images/light_signup_image.png";
-  static final String lightSignUpWelcome = "assets/images/light_signup_welcome.png";
-  static final String lightSignUpRectangle = "assets/images/light_signup_rectangle.png";
- 
- //========================= Login Signup Background image ==================
+  static final String lightSignUpWelcome =
+      "assets/images/light_signup_welcome.png";
+  static final String lightSignUpRectangle =
+      "assets/images/light_signup_rectangle.png";
+
+  //========================= Login Signup Background image ==================
   static final String loginBackground = "assets/images/login_background.png";
   static final String loginBgLeft = "assets/images/login_shape_left.png";
-
 
   static final String getStartMan = "assets/images/light_welcome_image.png";
   static final String bird = "assets/images/bird.png";
 
-  static final String chooseTopicScreenBackground = "assets/images/choose_topic_background.png";
+  static final String chooseTopicScreenBackground =
+      "assets/images/choose_topic_background.png";
 
+  //============================ Choose Topics Screen gridview Image ============================
+  static final String betterSleep =
+      "assets/images/choose_topics/better_sleep.png";
+  static final String improvePerformance =
+      "assets/images/choose_topics/improve_performance.png";
+  static final String increaseHappiness =
+      "assets/images/choose_topics/incress_happiness.png";
+  static final String personalGrowth =
+      "assets/images/choose_topics/personal_growth.png";
+  static final String reduceAnxiety =
+      "assets/images/choose_topics/reduce_anxiety.png";
+  static final String reduceStress =
+      "assets/images/choose_topics/reduce_stress.png";
 
+  //============================ Meditate Screen GridView image ===================
+  static final String anxietRelease =
+      "assets/images/meditate/anxiet_release.png";
+  static final String calm = "assets/images/meditate/calm.png";
+  static final String sunRise = "assets/images/meditate/sun_rise.png";
+  static final String sunDown = "assets/images/meditate/sun_down.png";
+  static final String banner = "assets/images/meditate/banner.png";
 
-//============================ Choose Topics Screen gridview Image ============================
-static final String betterSleep = "assets/images/choose_topics/better_sleep.png";
-static final String improvePerformance = "assets/images/choose_topics/improve_performance.png";
-static final String increaseHappiness = "assets/images/choose_topics/incress_happiness.png";
-static final String personalGrowth = "assets/images/choose_topics/personal_growth.png";
-static final String reduceAnxiety = "assets/images/choose_topics/reduce_anxiety.png";
-static final String reduceStress = "assets/images/choose_topics/reduce_stress.png";
+  //========================== Light Theme Music screen Background ==============
+  static final String lightMusicBgTop = "assets/images/light_music_bg_top.png";
+  static final String lightMusicBgBottom =
+      "assets/images/light_music_bg_bottom.png";
 
+  //====================== MusicV2 ==============================
+  static final String musicV2BL = "assets/images/musicV2/bottom_left.png";
+  static final String musicV2CT = "assets/images/musicV2/circle_top.png";
+  static final String musicV2CB = "assets/images/musicV2/circle_bottom.png";
+  static final String musicV2PB = "assets/images/musicV2/play_section.png";
+  static final String musicV2TR = "assets/images/musicV2/top_right.png";
 
-//============================ Meditate Screen GridView image ===================
-static final String anxietRelease = "assets/images/meditate/anxiet_release.png";
-static final String calm = "assets/images/meditate/calm.png";
-static final String sunRise= "assets/images/meditate/sun_rise.png";
-static final String sunDown = "assets/images/meditate/sun_down.png";
-
-//========================== Light Theme Music screen Background ==============
-static final String lightMusicBgTop = "assets/images/light_music_bg_top.png";
-static final String lightMusicBgBottom = "assets/images/light_music_bg_bottom.png";
-
-
-
-
-
-
+  //========================== Music details screen ============
+  static final String musicDetailsCoverBg =
+      "assets/images/music_details_cover.png";
+  static final String courseDetailsCoverBg =
+      "assets/images/course_details_cover_bg.png";
 }

@@ -30,7 +30,7 @@ class _CourseDetailsState extends State<CourseDetails> {
             children: [
               //========================= Cover Image ====================
               DetailsCoverContainer(
-                bgImagePath: AssetsImagesPath.focus,
+                bgImagePath: AssetsImagesPath.courseDetailsCoverBg,
                 onTapBackButton: () => Navigator.pop(context),
               ),
 

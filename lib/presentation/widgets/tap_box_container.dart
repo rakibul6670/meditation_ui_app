@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 
 class TapBoxContainer extends StatelessWidget {
   final int index;
-  final  int selectedScreen;
+  final int selectedScreen;
   final Map<String, String> tab;
+  final Color? titleColor;
+  final Color? bgColor;
 
   const TapBoxContainer({
     super.key,
     required this.index,
     required this.selectedScreen,
     required this.tab,
+    this.titleColor, this.bgColor,
   });
 
   @override
@@ -24,10 +27,10 @@ class TapBoxContainer extends StatelessWidget {
           width: 65,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-    
+
             color: selectedScreen == index
                 ? Color(0xff8e97fd)
-                : Color(0xff586894),
+                : bgColor?? Color(0xff586894),
           ),
           child: Center(
             child: Image.asset(
@@ -38,9 +41,12 @@ class TapBoxContainer extends StatelessWidget {
             ),
           ),
         ),
-    
+
         //---------------------------Boxt Title-----------------
-        Text(tab["title"].toString(), style: textTheme.titleMedium),
+        Text(
+          tab["title"].toString(),
+          style: textTheme.titleMedium!.copyWith(color: titleColor),
+        ),
       ],
     );
   }

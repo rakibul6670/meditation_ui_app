@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/data/dummeyData/male_course_play_list.dart';
 
@@ -90,6 +91,7 @@ class _VoiceTabState extends State<VoiceTab> {
                     onTap: () {
                       selectedCourseIndex = index;
                       setState(() {});
+                      Navigator.pushNamed(context, AppRoutes.musicV2);
                     },
                     child: ListTile(
                       leading: Icon(

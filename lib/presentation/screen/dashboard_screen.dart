@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meditation_ui_app/presentation/screen/home_screen.dart';
+import 'package:meditation_ui_app/presentation/screen/meditate_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/sleep_screen.dart';
 
 import 'package:meditation_ui_app/presentation/widgets/bottom_nav_bar_container.dart';
@@ -23,14 +24,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
   List<Widget> screen = [
     HomeScreen(),
     SleepScreen(),
-    SleepScreen(),
+    MeditateScreen(),
     SleepScreen(),
     SleepScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+
 
     return Scaffold(
       //===========================Body Section ============================

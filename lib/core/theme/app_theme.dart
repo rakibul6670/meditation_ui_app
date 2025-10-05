@@ -30,7 +30,7 @@ class AppTheme {
     ),
 
     //==================Input Field Theme =============
-    inputDecorationTheme: InputDecorationThemeData(
+    inputDecorationTheme: InputDecorationTheme(
       
       hintStyle: TextStyle(
         color: Color(0xffA1A4B2),
@@ -132,8 +132,7 @@ class AppTheme {
     ),
 
     //==================Input Field Theme ======================
-    inputDecorationTheme: InputDecorationThemeData(
-      
+    inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyle(
         color: Color(0xffA1A4B2),
         fontFamily: "HelveticaNeue",
@@ -163,8 +162,7 @@ class AppTheme {
       )
     ),
 
-  //============================================================
-
+  //==================================
 
   );
 

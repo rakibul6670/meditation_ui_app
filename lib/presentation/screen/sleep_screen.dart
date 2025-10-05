@@ -93,8 +93,11 @@ class _SleepScreenState extends State<SleepScreen> {
                 child: IndexedStack(
                   index: selectedScreen,
                   children: [
+
+                    //======================= ALL ==============================
                     SingleChildScrollView(child: TapBarAllScreen()),
 
+                    //===================== My Tap =============================
                     SingleChildScrollView(
                       child: Center(
                         child: Text(
@@ -104,6 +107,7 @@ class _SleepScreenState extends State<SleepScreen> {
                       ),
                     ),
 
+                    //==================== Anxious =============================
                     SingleChildScrollView(
                       child: Center(
                         child: Text(
@@ -113,6 +117,7 @@ class _SleepScreenState extends State<SleepScreen> {
                       ),
                     ),
 
+                    //======================= Sleep Tap =======================
                     SingleChildScrollView(
                       child: Center(
                         child: Text(
@@ -122,6 +127,7 @@ class _SleepScreenState extends State<SleepScreen> {
                       ),
                     ),
 
+                    //================== Kids ================================
                     SingleChildScrollView(
                       child: Center(
                         child: Text(

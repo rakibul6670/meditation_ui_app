@@ -4,18 +4,21 @@ import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/presentation/widgets/music_play_screen_background.dart';
 
 class MusicPlayScreen extends StatefulWidget {
-   const MusicPlayScreen({super.key});
+  const MusicPlayScreen({super.key});
 
   @override
   State<MusicPlayScreen> createState() => _MusicPlayScreenState();
 }
 
 class _MusicPlayScreenState extends State<MusicPlayScreen> {
-   double currentDuration = 1.30;
+  double currentDuration = 1.30;
 
-   double totalDuration = 45.00;
+  double totalDuration = 45.00;
 
-   late double currentPosition = (currentDuration / totalDuration) * 100;
+  late double currentPosition = (currentDuration / totalDuration) * 100;
+
+  //=================== isPlay ============
+  bool isPlay = false;
 
   @override
   Widget build(BuildContext context) {
@@ -28,81 +31,103 @@ class _MusicPlayScreenState extends State<MusicPlayScreen> {
             child: Column(
               children: [
                 AppSpacing.v391,
-        
+
                 Text("Night Island", style: textTheme.headlineMedium),
                 AppSpacing.v10,
-        
+
                 Text("Music sub title", style: textTheme.titleLarge),
-        
+
                 //======================= Music rewind , forward and play button Section ==================
                 AppSpacing.v70,
-        
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    //================== Music Rewind Button =================
-                   // AppSpacing.h63,
-        
-                    Image.asset(
-                      AssetsIconsPath.musicRewind,
-                      height: 39,
-                      width: 38,
-                      fit: BoxFit.cover,
+                    //================== Music Rewind Button ========
+                    // AppSpacing.h63,
+                    GestureDetector(
+                      onTap: () {
+                        if (currentDuration > 0.10) {
+                          currentDuration -= 0.10;
+                        }
+                        setState(() {});
+                      },
+                      child: Icon(Icons.replay_10, size: 40,color: Colors.white,),
                     ),
-                   // AppSpacing.h56,
-        
-                    // ============== Music play Button=============
-                    Image.asset(
-                      AssetsIconsPath.musicPlayButton,
-                      height: 109,
-                      width: 109,
-                      fit: BoxFit.cover,
+
+                    //Spacing.h56,
+
+                    // ============== Music play Button=======
+                    Container(
+                      height: 87,
+                      width: 87,
+                      decoration: BoxDecoration(
+                        //e6e7f2
+                        color: Color(0xffe6e7f2),
+                        shape: BoxShape.circle,
+                        
+                    
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isPlay = !isPlay;
+                          });
+                        },
+                        child: Icon(
+                          isPlay ? Icons.play_circle : Icons.pause,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                      ),
                     ),
-        
-                    //================== Music Rewind Button =================
-                    Image.asset(
-                      AssetsIconsPath.musicForward,
-                      height: 39,
-                      width: 38,
-                      fit: BoxFit.cover,
+
+                    //================== Music Rewind Button =========
+                    GestureDetector(
+                      onTap: () {
+                        if (currentDuration > 0.10) {
+                          currentDuration += 0.10;
+                        }
+                        setState(() {});
+                      },
+                      child: Icon(Icons.forward_10_sharp, size: 40,color: Colors.white,),
                     ),
-                  //  AppSpacing.h63,
+
+                    //  AppSpacing.h63,
                   ],
                 ),
-        
+
                 //==================== Music time Section ========================
-               AppSpacing.v60,
+                AppSpacing.v60,
                 // Slider
                 Slider(
                   value: currentDuration,
-                  min:0,
+                  min: 0,
                   max: totalDuration,
                   activeColor: Colors.blue,
                   inactiveColor: Colors.grey,
                   onChanged: (value) {
                     currentDuration = value;
-                    setState(() {
-
-                    });
+                    setState(() {});
                   },
                 ),
-        
 
-        
                 AppSpacing.v20,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     //---------------Start time-----------
-                    Text(currentDuration.toDouble().toStringAsFixed(2), style: textTheme.titleMedium),
+                    Text(
+                      currentDuration.toDouble().toStringAsFixed(2),
+                      style: textTheme.titleMedium,
+                    ),
                     //-------------End time------------
-                    Text(totalDuration.toDouble().toStringAsFixed(2), style: textTheme.titleMedium),
+                    Text(
+                      totalDuration.toDouble().toStringAsFixed(2),
+                      style: textTheme.titleMedium,
+                    ),
                   ],
                 ),
                 AppSpacing.v20,
-
-
-
               ],
             ),
           ),

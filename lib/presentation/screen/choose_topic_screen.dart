@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
+import 'package:meditation_ui_app/data/dummeyData/choose_topic_data_list.dart';
 import 'package:meditation_ui_app/presentation/widgets/grid_view_stagger_section.dart';
 
 class ChooseTopicScreen extends StatelessWidget {
@@ -74,7 +75,10 @@ class ChooseTopicScreen extends StatelessWidget {
                         ),
                         AppSpacing.v30,
                         //=========================== Grid stagger =======
-                        GridViewStaggerSection()
+                        GridViewStaggerSection(
+                          dataList:chooseTopicDataList,
+
+                        )
                               
                     
                                     

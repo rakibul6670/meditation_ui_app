@@ -23,7 +23,7 @@ class GetStartedScreen extends StatelessWidget {
               SizedBox(height: 55),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 10,
+
                 children: [
                   //---------------------Silent Text --------------
                   Text(

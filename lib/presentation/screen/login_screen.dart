@@ -17,8 +17,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  //=========================== isHiden Password ==============
-  final bool _isHidePassword = true;
+
+
 
   //======================== Controller ===============
   final TextEditingController _emailController = TextEditingController();
@@ -43,6 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.all(20.0),
             child: Form(
               key: _formKey,
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Column(
                 children: [
                   SizedBox(height: 33),

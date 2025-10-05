@@ -6,13 +6,16 @@ class MusicCard extends StatelessWidget {
   final String imagePath;
   final String title;
   final String time;
+  final Color? titleColor;
+  final Color? timeColor;
 
-  const MusicCard({super.key, required this.imagePath, required this.title, required this.time});
+  const MusicCard({super.key, required this.imagePath, required this.title, required this.time, this.titleColor, this.timeColor});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         //-----------------Image -----------------
         Image.asset(
@@ -24,12 +27,16 @@ class MusicCard extends StatelessWidget {
 
         //----------------------Card title ----------------
         AppSpacing.v10,
+        //==================== Title ==============
+        Text(title,
+            maxLines: 1,overflow: TextOverflow.ellipsis,
+            style: TextStyle(color: titleColor ?? Colors.white)),
 
-        Text(title, style: TextStyle(color: Colors.white)),
-
+        //================== Time ==============
         Text(
          time,
-          style: TextStyle(color: Colors.white70),
+          maxLines: 1,overflow: TextOverflow.ellipsis,
+          style: TextStyle(color:timeColor?? Colors.white70),
         ),
       ],
     );

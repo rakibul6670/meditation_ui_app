@@ -6,6 +6,7 @@ import 'package:meditation_ui_app/presentation/screen/dashboard_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/get_started_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/login_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/music_play_screen.dart';
+import 'package:meditation_ui_app/presentation/screen/music_v2_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/reminder_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/sign_up_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/sign_up_sign_in_screen.dart';
@@ -25,6 +26,7 @@ class AppPages{
     AppRoutes.chooseTopicScreen : (context)=> ChooseTopicScreen(),
     AppRoutes.reminderScreen : (context) => ReminderScreen(),
     AppRoutes.courseDetails : (context) => CourseDetails(),
+    AppRoutes.musicV2 : (context)=> MusicV2Screen(),
 
   };
 }

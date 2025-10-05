@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                 ),
           
                 AppSpacing.v20,
-                BannerContainerBox(),
+                BannerContainerBox(title: 'Daily Thought', subTitle: 'Meditation * 3-10 MIN',imgPath: AssetsIconsPath.play,),
                 AppSpacing.v40,
           
                 //==========================Recommended Section =================
@@ -111,6 +111,8 @@ class HomeScreen extends StatelessWidget {
                           imagePath: AssetsImagesPath.happiness,
                           title: "Happiness",
                           time: "MEDITATION . 3-10 MIN",
+                          timeColor: Colors.grey,
+                          titleColor: Colors.black,
                         ),
                       );
                     },
