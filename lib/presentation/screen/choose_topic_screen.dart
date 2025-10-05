@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/presentation/widgets/grid_view_stagger_section.dart';
@@ -25,7 +24,7 @@ class ChooseTopicScreen extends StatelessWidget {
               Positioned(
                 top: 107,
                 child: Image.asset(
-                  AssetsImagesPath.ChooseTopicScreenBackground,
+                  AssetsImagesPath.chooseTopicScreenBackground,
                   height: 755,
                   width: screenSize.width,
                   fit: BoxFit.cover,

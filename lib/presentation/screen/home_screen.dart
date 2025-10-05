@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
+
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
-import 'package:meditation_ui_app/presentation/screen/music_details_screen.dart';
+
 import 'package:meditation_ui_app/presentation/widgets/banner_container_box.dart';
 import 'package:meditation_ui_app/presentation/widgets/music_card.dart';
 
@@ -17,7 +18,8 @@ class HomeScreen extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      backgroundColor:Theme.of(context).scaffoldBackgroundColor,
+      //backgroundColor:Theme.of(context).scaffoldBackgroundColor,
+       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -31,25 +33,34 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   spacing: 10,
                   children: [
-                    Text("Silent",style: textTheme.titleMedium,),
+                    Text("Silent",style: textTheme.titleMedium!.copyWith(
+                  color: Colors.black,
+                ),),
                     Image.asset(AssetsIconsPath.logo, height: 30, width: 30),
-                    Text("Moon",style: textTheme.titleMedium,),
+                    Text("Moon",style: textTheme.titleMedium!.copyWith(
+                  color: Colors.black,
+                ),),
                   ],
                 ),
           
                 AppSpacing.v40,
                 //====================Welcome user ===================
-                Text("Good Morning ,Afsar",style: textTheme.headlineMedium,),
+                Text("Good Morning ,Afsar",style: textTheme.headlineMedium!.copyWith(
+                  color: Colors.black,
+                ),),
                 AppSpacing.v10,
           
                 //================ Sub Title =======================
-                Text("We wish you have a good day",style: textTheme.titleLarge,),
+                Text("We wish you have a good day",style: textTheme.titleLarge!.copyWith(
+                  color: Colors.black,
+                ),),
           
                 AppSpacing.v30,
           
                 //==========================Start Container Box Section ===========
                 Row(
-                  spacing: 10,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      
                   children: [
                     StartContainerBox(
                       iconImagePath: AssetsImagesPath.basicSource,
@@ -60,6 +71,10 @@ class HomeScreen extends StatelessWidget {
                     ),
           
                     StartContainerBox(
+                      color: Color(0xffFFC97E),
+                      timeColor: Colors.black,
+                      subTitleColor: Colors.black,
+                      titleColor: Colors.black,
                       iconImagePath: AssetsImagesPath.relaxation,
                       buttonImagePath: AssetsImagesPath.startBlackButton,
                       title: 'Relaxation',
@@ -74,7 +89,9 @@ class HomeScreen extends StatelessWidget {
                 AppSpacing.v40,
           
                 //==========================Recommended Section =================
-                Text("Recommended for you",style: textTheme.headlineSmall,),
+                Text("Recommended for you",style: textTheme.headlineSmall!.copyWith(
+                  color: Colors.black,
+                ),),
                 AppSpacing.v20,
           
                 SizedBox(
@@ -87,13 +104,7 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: (){
-
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> MusicDetailsScreen()));
-
-
-                          Navigator.pushNamed(
-                              context, AppRoutes.musicDetailsScreen,
-                          );
+                          Navigator.pushNamed(context, AppRoutes.courseDetails);
 
                         },
                         child: MusicCard(

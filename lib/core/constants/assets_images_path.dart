@@ -36,16 +36,37 @@ class AssetsImagesPath {
   static final String lightSignUpImage = "assets/images/light_signup_image.png";
   static final String lightSignUpWelcome = "assets/images/light_signup_welcome.png";
   static final String lightSignUpRectangle = "assets/images/light_signup_rectangle.png";
-
+ 
+ //========================= Login Signup Background image ==================
   static final String loginBackground = "assets/images/login_background.png";
+  static final String loginBgLeft = "assets/images/login_shape_left.png";
+
+
   static final String getStartMan = "assets/images/light_welcome_image.png";
   static final String bird = "assets/images/bird.png";
 
-  static final String ChooseTopicScreenBackground = "assets/images/choose_topic_background.png";
+  static final String chooseTopicScreenBackground = "assets/images/choose_topic_background.png";
 
 
 
+//============================ Choose Topics Screen gridview Image ============================
+static final String betterSleep = "assets/images/choose_topics/better_sleep.png";
+static final String improvePerformance = "assets/images/choose_topics/improve_performance.png";
+static final String increaseHappiness = "assets/images/choose_topics/incress_happiness.png";
+static final String personalGrowth = "assets/images/choose_topics/personal_growth.png";
+static final String reduceAnxiety = "assets/images/choose_topics/reduce_anxiety.png";
+static final String reduceStress = "assets/images/choose_topics/reduce_stress.png";
 
+
+//============================ Meditate Screen GridView image ===================
+static final String anxietRelease = "assets/images/meditate/anxiet_release.png";
+static final String calm = "assets/images/meditate/calm.png";
+static final String sunRise= "assets/images/meditate/sun_rise.png";
+static final String sunDown = "assets/images/meditate/sun_down.png";
+
+//========================== Light Theme Music screen Background ==============
+static final String lightMusicBgTop = "assets/images/light_music_bg_top.png";
+static final String lightMusicBgBottom = "assets/images/light_music_bg_bottom.png";
 
 
 

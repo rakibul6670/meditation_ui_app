@@ -2,10 +2,59 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
 
-  //===================== Light Theme ==========================
-  static ThemeData lightTheme = ThemeData();
+  //===================== Light Theme ========================================================================================
+  static ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: Colors.white,
+     //--------------Bottom navigation bar theme ------------
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Color(0xffFFFFFF),
+      selectedItemColor: Color(0xff8E97FD),
+      unselectedItemColor: Color(0xffA0A3B1),
 
-  //============================ Dark Theme =========================
+    ),
+
+    //================== Elevated Button Style ===================
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Color(0xff8e97fd),
+        foregroundColor: Colors.white,
+        textStyle: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          fontFamily: "HelveticaNeue",
+          color: Color(0xffebeaec),
+        ),
+
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(38)),
+      ),
+    ),
+
+    //==================Input Field Theme =============
+    inputDecorationTheme: InputDecorationThemeData(
+      
+      hintStyle: TextStyle(
+        color: Color(0xffA1A4B2),
+        fontFamily: "HelveticaNeue",
+        fontSize: 16,
+        fontWeight: FontWeight.w300,
+      ),
+      filled: true,
+      fillColor: Color(0xffF2F3F7),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide.none,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide.none,
+      ),
+
+      
+    ),
+
+  );
+
+  //============================ Dark Theme ===============================================================================
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     primaryColor: Color(0xff8e97fd),
@@ -101,6 +150,17 @@ class AppTheme {
         borderRadius: BorderRadius.circular(15),
         borderSide: BorderSide.none,
       ),
+
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide.none,
+      ),
+
+
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide.none,
+      )
     ),
 
   //============================================================

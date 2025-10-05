@@ -14,10 +14,11 @@ class BottomNavBarContainer extends StatelessWidget {
       width: 46,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18),
-        color: currentIndex == index ? Color(0xff8e97fd) : Color(0xff03174d),
+        color: currentIndex == index ?  Color(0xff8e97fd) : Color(0xff03174d),
       ),
 
-      child: Icon(icon),
+      child: Icon(icon,color: currentIndex==0?Colors.white:
+      currentIndex == index? Color(0xffE6E7F2):Color(0xff98A1BD),),
     );
   }
 }

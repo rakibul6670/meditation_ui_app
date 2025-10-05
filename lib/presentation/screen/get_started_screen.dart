@@ -12,7 +12,7 @@ class GetStartedScreen extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Color(0xff767FF6),
 
       //============================
       body: GetStartedBackground(

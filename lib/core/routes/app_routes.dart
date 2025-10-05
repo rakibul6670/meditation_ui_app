@@ -9,6 +9,8 @@ class AppRoutes{
   static final String getStartedScreen = "/getStartedScreen";
   static final String chooseTopicScreen = "/chooseTopicScreen";
   static final String reminderScreen = "/reminderScreen";
+  static final String courseDetails = "/courseDetails";
+  static final String musicV2 = "/musicV2";
 
 
 }

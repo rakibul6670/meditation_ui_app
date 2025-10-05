@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 
 class GetStartedBackground extends StatelessWidget {
@@ -77,7 +76,7 @@ class GetStartedBackground extends StatelessWidget {
               height: 422,
               width: 422,
               decoration: BoxDecoration(
-                color: Color(0xff99A1FF),
+                color: Color(0xff9AA2FD),
                 shape: BoxShape.circle,
               ),
            ),),

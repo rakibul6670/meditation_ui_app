@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
+import 'package:meditation_ui_app/presentation/widgets/custom_elevated_button.dart';
+import 'package:meditation_ui_app/presentation/widgets/on_tap_link_text.dart';
 import 'package:meditation_ui_app/presentation/widgets/sign_up_sign_in_background.dart';
 
 class SignUpSignInScreen extends StatefulWidget {
@@ -12,9 +14,9 @@ class SignUpSignInScreen extends StatefulWidget {
 class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+    // final textTheme = Theme.of(context).textTheme;
 
-    final double screenWidth = MediaQuery.of(context).size.width;
+    // final double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -51,57 +53,34 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
               SizedBox(height: 78),
 
               //----------------------Sign up Button -------------
-              SizedBox(
-                width: screenWidth < 300 ? screenWidth : 374,
-                height: 63,
-                child: ElevatedButton(
-                  //-----------------Navigate to login screen ---------
-                  onPressed: () {
-                     Navigator.pushNamedAndRemoveUntil(
-                        context,
-                        AppRoutes.signupScreen,
-                        (route) => false,
-                      );
-                   
-                  },
-
-                  child: Text("Sign up"),
-                ),
+              CustomElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    AppRoutes.signupScreen,
+                    (route) => false,
+                  );
+                },
+                buttonName: "Sign up",
               ),
 
               //AppSpacing.h20,
               SizedBox(height: 20),
 
               //---------------Link Text -------------
-              GestureDetector(
+              OnTapLinkText(
                 onTap: () {
-                   Navigator.pushNamedAndRemoveUntil(
-                        context,
-                        AppRoutes.loginScreen,
-                        (route) => false,
-                      );
-                
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    AppRoutes.loginScreen,
+                    (predicate) => false,
+                  );
                 },
-
-                child: RichText(
-                  text: TextSpan(
-                    text: "Already have an account ? ",
-                    style: textTheme.titleSmall!.copyWith(
-                      color: Colors.black54,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: "  LOGIN",
-                        style: textTheme.titleSmall!.copyWith(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                title: "Already have an account ? ",
+                linkTextName: "LOGIN",
               ),
-              SizedBox(height: 80,),
-            
+
+              SizedBox(height: 80),
             ],
           ),
         ),

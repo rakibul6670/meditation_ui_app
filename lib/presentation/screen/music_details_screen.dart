@@ -189,6 +189,7 @@ class MusicDetailsScreen extends StatelessWidget {
           ),
         ),
       ),
+    
     );
   }
 }

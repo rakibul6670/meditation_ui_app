@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/presentation/screen/choose_topic_screen.dart';
+import 'package:meditation_ui_app/presentation/screen/course_details.dart';
 import 'package:meditation_ui_app/presentation/screen/dashboard_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/get_started_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/login_screen.dart';
@@ -23,6 +24,7 @@ class AppPages{
     AppRoutes.getStartedScreen : (context) => GetStartedScreen(),
     AppRoutes.chooseTopicScreen : (context)=> ChooseTopicScreen(),
     AppRoutes.reminderScreen : (context) => ReminderScreen(),
+    AppRoutes.courseDetails : (context) => CourseDetails(),
 
   };
 }
