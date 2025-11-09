@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
@@ -46,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Column(
                 children: [
-                  SizedBox(height: 33),
+                  SizedBox(height: 33.h),
 
                   //=================== Title ===================
                   Text(
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       // ------34 font size
                     ),
                   ),
-                  SizedBox(height: 33),
+                  SizedBox(height: 33.h),
 
                   //====================== Login with facebook button ====================
                   SocialLoginButton(
@@ -66,7 +67,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   //==================== Login with google Button==========
-                  AppSpacing.v20,
+                  //AppSpacing.v20,
+                  SizedBox(height: 20.h),
 
                   SocialLoginButton(
                     backgroundColor: Colors.white, //Color(0xffEBEAEC)
@@ -78,11 +80,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     buttonName: "Continue with google",
                   ),
 
-                  AppSpacing.v40,
+                  //AppSpacing.v40,
+                  SizedBox(height: 40.h),
 
                   //--------------------
-                  Text("OR LOG IN WITH EMAI"),
-                  AppSpacing.v40,
+                  Text("OR LOG IN WITH EMAI",style: textTheme.titleSmall!.copyWith(
+                    color: Color(0xffA1A4B2),
+                  ),),
+                 // AppSpacing.v40,
+                  SizedBox(height: 40.h),
 
                   //=================== Email Field Section ===============
                   TextFormField(
@@ -109,6 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   AppSpacing.v20,
+
                   //=================== Password Field Section ===============
                   PasswordFormField(passwordController: _passwordController),
 
@@ -124,7 +131,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   //=========================== Forgot password ===========
                   Center(child: Text("Forgot password")),
 
-                  AppSpacing.v105,
+                  //AppSpacing.v105,
+                  SizedBox(height: 104.h),
 
                   //================ Link text =======================
                   OnTapLinkText(

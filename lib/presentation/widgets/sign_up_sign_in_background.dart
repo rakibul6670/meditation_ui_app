@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/constants/assets_icons_path.dart';
 import '../../core/constants/assets_images_path.dart';
@@ -33,21 +34,21 @@ class SignUpSignInBackground extends StatelessWidget {
 
          //=========================== Foreground man siting image ========
           Positioned(
-            top: 161,
+            top: 161.h,
             child: Image.asset(
               AssetsImagesPath.lightSignUpImage,
-              height: 242,
+              height: 242.h,
 
               width: screenWidth < 300
                   ? screenWidth 
-                  : 332,
+                  : 332.w,
               fit: BoxFit.cover,
             ),
           ),
 
           //===================== Title ==================
           Positioned(
-            top: 51,
+            top: 50.h,
             left: 0,
             right: 0,
             child: Row(
@@ -61,7 +62,7 @@ class SignUpSignInBackground extends StatelessWidget {
                 ),
 
                 //-------------------Icon -------------
-                Image.asset(AssetsIconsPath.logo, height: 30, width: 30),
+                Image.asset(AssetsIconsPath.logo, height: 30.h, width: 30.w),
 
                 //----------------------Moon Text------------------
                 Text(

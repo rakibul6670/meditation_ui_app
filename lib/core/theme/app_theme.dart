@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTheme {
 
@@ -63,14 +64,14 @@ class AppTheme {
     //-------------------Text Theme -------------
     textTheme: TextTheme(
       headlineMedium: TextStyle(
-        fontSize: 34,
+        fontSize: 34.sp,
         fontWeight: FontWeight.w700,
         fontFamily: "Inter",
         letterSpacing: 2,
         color: Color(0xFFE6E7F2),
       ),
       headlineSmall: TextStyle(
-        fontSize: 24,
+        fontSize: 24.sp,
         fontWeight: FontWeight.w400,
         fontFamily: "HelveticaNeue",
         letterSpacing: 2,
@@ -78,30 +79,30 @@ class AppTheme {
       ),
 
       titleLarge: TextStyle(
-        fontSize: 20,
+        fontSize: 20.sp,
         fontWeight: FontWeight.w300,
         color: Color(0xffebeaec),
       ),
       titleMedium: TextStyle(
-        fontSize: 16,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w300,
         color: Color(0xffebeaec),
       ),
       titleSmall: TextStyle(
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w400,
         fontFamily: "HelveticaNeue",
         color: Color(0xffebeaec),
       ),
 
       bodyLarge: TextStyle(
-        fontSize: 18,
+        fontSize: 18.sp,
         fontWeight: FontWeight.w700,
         color: Color(0xffebeaec),
       ),
 
       bodySmall: TextStyle(
-        fontSize: 11,
+        fontSize: 11.sp,
         fontWeight: FontWeight.w400,
         color: Color(0xffebeaec),
         // letterSpacing: 5,

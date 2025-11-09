@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/theme/app_spacing.dart';
 class SocialLoginButton extends StatelessWidget {
@@ -25,20 +26,20 @@ class SocialLoginButton extends StatelessWidget {
 
     return  Container(
       padding: EdgeInsets.symmetric(horizontal: 20),
-      height: 63,
+      height: 63.h,
       constraints: BoxConstraints(
-        maxWidth: 374,
+        maxWidth: 374.w,
       ),
       decoration: BoxDecoration(
         color: backgroundColor?? Color(0xff7583CA),
-        borderRadius: BorderRadius.circular(38),
+        borderRadius: BorderRadius.circular(38.r),
         border: border,
       ),
       child: Row(
         children: [
           Icon(
             icon,
-            size: 30,
+            size: 30.r,
             color:iconColor,
           ),
           AppSpacing.h20,

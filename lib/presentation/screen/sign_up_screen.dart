@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
@@ -43,12 +44,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: AuthBackground(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Form(
               key: _formKey,
               autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Column(
                 children: [
+                  SizedBox(height: 20.h),
                   //====================== back Button ================
                   Align(
                     alignment: Alignment.topLeft,
@@ -65,7 +67,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
 
-                  SizedBox(height: 28),
+                  SizedBox(height: 28.h),
 
                   //=================== Title ===================
                   Text(
@@ -75,7 +77,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       // ------34 font size
                     ),
                   ),
-                  SizedBox(height: 33),
+                  SizedBox(height: 33.h,),
 
                   //====================== Login with facebook button ====================
                   SocialLoginButton(
@@ -85,7 +87,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
 
                   //==================== Login with google Button==========
-                  AppSpacing.v20,
+                  //AppSpacing.v20,
+                  SizedBox(height: 20.h),
 
                   SocialLoginButton(
                     backgroundColor: Colors.white, //Color(0xffEBEAEC)
@@ -97,11 +100,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     buttonName: "Continue with google",
                   ),
 
-                  AppSpacing.v40,
+                  //AppSpacing.v40,
+                  SizedBox(height: 40.h),
 
                   //--------------------
                   Text("OR LOG IN WITH EMAI"),
-                  AppSpacing.v40,
+                 // AppSpacing.v40,
+                  SizedBox(height: 40.h),
 
                   //=================== Name Field Section ===============
                   TextFormField(
@@ -126,7 +131,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
 
-                  AppSpacing.v20,
+                 // AppSpacing.v20,
+                  SizedBox(height: 20.h),
 
                   //=================== Email Field Section ===============
                   TextFormField(
@@ -151,11 +157,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
 
-                  AppSpacing.v20,
+                  //AppSpacing.v20,
+                  SizedBox(height: 20.h),
                   //=================== Password Field Section ===============
                   PasswordFormField(passwordController: _passwordController),
 
-                  AppSpacing.v32,
+                  //AppSpacing.v32,
+                  SizedBox(height: 32.h),
 
                   //===================Privacy and Policy =================
                   CheckboxListTile(
@@ -185,19 +193,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                   ),
 
-                  AppSpacing.v23,
+                  //AppSpacing.v23,
+                  SizedBox(height: 23.h),
                   //====================== Login Button ======= ===========
                   CustomElevatedButton(
                     onPressed: () => _onTapSignUpButton(),
                     buttonName: "Sign up",
                   ),
 
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
 
-                  //forgot password
-                  //104
 
-                  //----
                 ],
               ),
             ),

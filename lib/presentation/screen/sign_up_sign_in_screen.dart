@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/presentation/widgets/custom_elevated_button.dart';
 import 'package:meditation_ui_app/presentation/widgets/on_tap_link_text.dart';
@@ -14,10 +15,6 @@ class SignUpSignInScreen extends StatefulWidget {
 class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
   @override
   Widget build(BuildContext context) {
-    // final textTheme = Theme.of(context).textTheme;
-
-    // final double screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: Colors.white,
 
@@ -25,7 +22,7 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
         child: SignUpSignInBackground(
           child: Column(
             children: [
-              SizedBox(height: 518),
+              SizedBox(height: 438.h),
 
               //--------------------Title -------------
               Text(
@@ -38,19 +35,19 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
               ),
 
               //AppSpacing.h15,
-              SizedBox(height: 15),
+              SizedBox(height: 15.h),
 
               //-------------------Sub title -------
               Text(
                 "Thousand of people are usign silent moon \n for smalls meditation ",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   fontFamily: "HelveticaNeue",
                   fontWeight: FontWeight.w300,
                 ),
               ),
-              SizedBox(height: 78),
+              SizedBox(height: 78.h),
 
               //----------------------Sign up Button -------------
               CustomElevatedButton(
@@ -65,7 +62,7 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
               ),
 
               //AppSpacing.h20,
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
 
               //---------------Link Text -------------
               OnTapLinkText(
@@ -80,7 +77,7 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
                 linkTextName: "LOGIN",
               ),
 
-              SizedBox(height: 80),
+              SizedBox(height: 94.h),
             ],
           ),
         ),

@@ -1,6 +1,7 @@
 class AppRoutes{
 
   static final String initialScreen = '/';
+  static final String signupSignInScreen = '/signupSignInScreen';
   static final String loginScreen = '/loginScreen';
   static final String dashboardScreen = "/dashboardScreen";
   static final String musicDetailsScreen = "/musicDetailsScreen";

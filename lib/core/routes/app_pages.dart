@@ -11,12 +11,14 @@ import 'package:meditation_ui_app/presentation/screen/reminder_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/sign_up_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/sign_up_sign_in_screen.dart';
 import '../../presentation/screen/music_details_screen.dart';
+import '../../welcome_screen.dart';
 
 class AppPages{
 
   static Map<String,Widget Function(BuildContext)> routes = {
 
-    AppRoutes.initialScreen : (context)=> SignUpSignInScreen(),
+    AppRoutes.initialScreen : (context)=> WelcomeScreen(),
+    AppRoutes.signupSignInScreen : (context)=> SignUpSignInScreen(),
     AppRoutes.loginScreen : (context)=> LoginScreen(),
     AppRoutes.dashboardScreen : (context)=> DashboardScreen(),
     AppRoutes.musicDetailsScreen : (context) => MusicDetailsScreen(),

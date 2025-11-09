@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
@@ -20,12 +21,13 @@ class GetStartedScreen extends StatelessWidget {
           child: Column(
             children: [
               //===================== Title ==================
-              SizedBox(height: 55),
+              SizedBox(height: 55.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-
+          
                 children: [
                   //---------------------Silent Text --------------
+                  SizedBox(width: 10.w,),
                   Text(
                     "Silent",
                     style: textTheme.titleMedium!.copyWith(color: const Color.fromARGB(255, 255, 255, 255)),
@@ -35,6 +37,7 @@ class GetStartedScreen extends StatelessWidget {
                   Image.asset(AssetsIconsPath.logo, height: 30, width: 30),
           
                   //----------------------Moon Text------------------
+                   SizedBox(width: 10.w,),
                   Text(
                     "Moon",
                     style: textTheme.titleMedium!.copyWith(color: const Color.fromARGB(255, 255, 255, 255)),
@@ -69,11 +72,11 @@ class GetStartedScreen extends StatelessWidget {
               ),
           
               //=======================Get Started Button ============
-              SizedBox(height: 438),
+              SizedBox(height: 438.h),
           
               SizedBox(
-                height: 63,
-                width: 374,
+                height: 63.h,
+                width: 374.w,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
@@ -89,7 +92,7 @@ class GetStartedScreen extends StatelessWidget {
               ),
           
               //SizedBox(height: 118,),
-              SizedBox(height: 80),
+              SizedBox(height: 80.h),
             ],
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 
 class GetStartedBackground extends StatelessWidget {
@@ -17,11 +18,11 @@ class GetStartedBackground extends StatelessWidget {
           
            //===========================Small Circle left ================
            Positioned(
-            top: 346,
-            left: 27,
+            top: 346.w,
+            left: 27.w,
             child: Container(
-              height: 6,
-              width: 6,
+              height: 6.h,
+              width: 6.w,
               decoration: BoxDecoration(
                 color: Color(0xffA6ADFB),
                 shape: BoxShape.circle,
@@ -31,11 +32,11 @@ class GetStartedBackground extends StatelessWidget {
             ),
            //===========================Medium Circle left =================
            Positioned(
-            top: 357,
-            left: 33,
+            top: 357.h,
+            left: 33.h,
             child:  Container(
-              height: 12,
-              width: 12,
+              height: 12.h,
+              width: 12.w,
               decoration: BoxDecoration(
                 color: Color(0xffA6ADFB),
                 shape: BoxShape.circle,
@@ -46,66 +47,84 @@ class GetStartedBackground extends StatelessWidget {
 
           //========================= cloud left side ====================
           Positioned(
-            top: 374,
-            child: Image.asset(AssetsImagesPath.cloud,width: 50,height: 24,)
+            top: 374.h,
+            child: Image.asset(
+              AssetsImagesPath.cloud,width: 50.w,height: 24.h,)
             ),
           
 
           //=======================Circle 1===============
         
            Positioned(
-            top: 369,
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              AssetsImagesPath.ellipse,
-              height: 492,
-              width: 492,
-            ),
+            top: 369.h,
+            left: 0.w,
+            right: 0.w,
+            child: Container(
+            //padding: EdgeInsets.all(35),
+            height: 492.h,
+            width: 492.w,
+            decoration: BoxDecoration(
+            color: Color(0xff9EA6FF),
+            shape: BoxShape.circle,
+                border: Border.all(color: Color(0xff9AA2FD))
+            ),),
+            // child: Image.asset(
+            //   AssetsImagesPath.ellipse,
+            //   height: 492.h,
+            //   width: 492.w,
+            // ),
           ),
 
            //=======================Circle 2===============
-          
-      
            Positioned(
-            top: 404,
-            left: 4,
-            right: 4,
+            top: 404.h,
+            left: 4.w,
+            right: 4.w,
             child: Container(
               //padding: EdgeInsets.all(35),
-              height: 422,
-              width: 422,
+              height: 422.h,
+              width: 422.w,
               decoration: BoxDecoration(
                 color: Color(0xff9AA2FD),
                 shape: BoxShape.circle,
+
               ),
            ),),
 
 
           //=======================Circle 3 ===============
            Positioned(
-            top: 438,
-            left: 34,
-            right:34,
-            child: Image.asset(
-              AssetsImagesPath.ellipse,
-              height: 354,
-              width: 354,
-            ),
+            top: 438.h,
+            left: 30.w, //34
+            right:30.w, //34
+               child: Container(
+                 padding: EdgeInsets.all(35),
+                 height: 248.h,
+                 width: 248.w,
+                 decoration: BoxDecoration(
+                   color: Color(0xff9EA6FF),
+                   shape: BoxShape.circle,
+                 ),
+               )
+            // child: Image.asset(
+            //   AssetsImagesPath.ellipse,
+            //   height: 354.h,
+            //   width: 354.w,
+            // ),
           ),
 
           //========================== Circle 4 =====================
            Positioned(
-            top: 473,
-            left: 35,
-            right: 35,
+            top: 473.h,
+            left: 35.w,
+            right: 35.w,
+            bottom: 35,
             child: Container(
-              //padding: EdgeInsets.all(35),
-              height: 248,
-              width: 248,
+              padding: EdgeInsets.all(35),
+              height: 248.h,
+              width: 248.w,
               decoration: BoxDecoration(
-                color: Color(0xff99A1FF),
-        
+                color: Color(0xff9EA6FF),
                 shape: BoxShape.circle,
               ),
            ),),
@@ -114,12 +133,12 @@ class GetStartedBackground extends StatelessWidget {
            //===================
            //266
             Positioned(
-            top: 654,
-             left: 0,
-             right:0,
+            top: 654.h,
+             left: 0.w,
+             right:0.w,
             child: Container(
-              height: 266,
-              width: 616,
+              height: 266.h,
+              width: 616.w,
               decoration: BoxDecoration(
                 color: Color(0xff8C96FF),
         
@@ -132,50 +151,50 @@ class GetStartedBackground extends StatelessWidget {
           //======================= Man siting  ===============
            Positioned(
            // top:397,
-           top: 409,
-            left: 9,
-            right:7,
+           top: 409.h,
+            left: 9.w,
+            right:7.w,
             child: Image.asset(
               AssetsImagesPath.getStartMan,
-              width: 430,
-              height: 258,
+              width: 430.w,
+              height: 258.h,
             ),
           ),
 
           //======================= Big Cloud ===============
            Positioned(
         
-           top: 434,
+           top: 434.h,
            // left: 9,
-            right:0,
+            right:0.w,
             child: Image.asset(
               AssetsImagesPath.cloud,
-              width: 114,
-              height: 55,
+              width: 114.w,
+              height: 55.h,
             ),
           ),
 
           //======================= Big Bird ===============
            Positioned(
-           top: 410,
+           top: 410.h,
            // left: 9,
-            right:135,
+            right:135.w,
             child: Image.asset(
               AssetsImagesPath.bird,
-              width: 36,
-              height: 14,
+              width: 36.w,
+              height: 14.h,
             ),
           ),
 
           //======================= Small Bird ===============
            Positioned(
-           top: 432,
-           left: 53,
+           top: 432.h,
+           left: 53.w,
           
             child: Image.asset(
               AssetsImagesPath.bird,
-              width: 22,
-              height: 8,
+              width: 22.w,
+              height: 8.h,
             ),
           ),
 
