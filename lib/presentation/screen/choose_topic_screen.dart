@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
 import 'package:meditation_ui_app/data/dummeyData/choose_topic_data_list.dart';
@@ -23,7 +24,7 @@ class ChooseTopicScreen extends StatelessWidget {
             children: [
               //======================== Background Image ==================
               Positioned(
-                top: 107,
+                top: 107.h,
                 child: Image.asset(
                   AssetsImagesPath.chooseTopicScreenBackground,
                   height: 755,
@@ -41,7 +42,7 @@ class ChooseTopicScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 76),
+                        SizedBox(height: 76.h),
                     
                         //========================== Title ====================
                         Text(
@@ -77,11 +78,11 @@ class ChooseTopicScreen extends StatelessWidget {
                         //=========================== Grid stagger =======
                         GridViewStaggerSection(
                           dataList:chooseTopicDataList,
-
+                        
                         )
-                              
                     
-                                    
+                    
+                    
                     
                     
                         //===============
