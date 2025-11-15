@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/constants/assets_images_path.dart';
 
@@ -15,10 +16,10 @@ class BannerContainerBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final texTheme = Theme.of(context).textTheme;
     return Container(
-      height: 95,
+      height: 95.h,
       decoration: BoxDecoration(
         color: Color(0xff333242),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         image: DecorationImage(
           image: AssetImage( AssetsImagesPath.bannerForground),
           fit: BoxFit.cover,
@@ -28,21 +29,21 @@ class BannerContainerBox extends StatelessWidget {
         children: [
           //----------------Title -----------
           Positioned(
-            top: 27,
-            left: 30,
+            top: 27.h,
+            left: 30.w,
             child: Text(title, style: texTheme.bodyLarge),
           ),
           //--------------Sub title -----------
           Positioned(
-            top: 56,
-            left: 30,
+            top: 56.h,
+            left: 30.w,
             child: Text(subTitle, style: texTheme.bodySmall),
           ),
           //-------------------Play Button ----------
           Positioned(
-            top: 28,
-            right: 30,
-            child: Image.asset(imgPath, height: 40, width: 40),
+            top: 28.h,
+            right: 30.w,
+            child: Image.asset(imgPath, height: 40.h, width: 40.w),
           ),
         ],
       ),

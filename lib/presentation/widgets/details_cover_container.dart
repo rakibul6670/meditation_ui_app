@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 
 class DetailsCoverContainer extends StatelessWidget {
@@ -16,8 +17,8 @@ class DetailsCoverContainer extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
 
     return Container(
-      height: 290,
-      width: screenSize.width,
+      height: 290.h,
+      width: screenSize.width.w,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(bgImagePath),
@@ -28,14 +29,14 @@ class DetailsCoverContainer extends StatelessWidget {
         children: [
           //================== Back Button ================
           Positioned(
-            left: 20,
-            top: 50,
+            left: 20.w,
+            top: 50.h,
             child: GestureDetector(
               onTap: onTapBackButton,
               child: Image.asset(
                 AssetsIconsPath.back,
-                height: 50,
-                width: 50,
+                height: 50.h,
+                width: 50.w,
                 fit: BoxFit.cover,
               ),
             ),
@@ -43,24 +44,24 @@ class DetailsCoverContainer extends StatelessWidget {
 
           //=================== Love Button ============
           Positioned(
-            right: 90,
-            top: 50,
+            right: 90.w,
+            top: 50.h,
             child: Image.asset(
               AssetsIconsPath.love,
-              height: 50,
-              width: 50,
+              height: 50.h,
+              width: 50.w,
               fit: BoxFit.cover,
             ),
           ),
 
           //========================Download Button ============
           Positioned(
-            right: 20,
-            top: 50,
+            right: 20.w,
+            top: 50.h,
             child: Image.asset(
               AssetsIconsPath.download,
-              height: 50,
-              width: 50,
+              height: 50.h,
+              width: 50.w,
               fit: BoxFit.cover,
             ),
           ),

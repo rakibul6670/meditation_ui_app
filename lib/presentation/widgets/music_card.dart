@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/theme/app_spacing.dart';
 
@@ -20,8 +21,8 @@ class MusicCard extends StatelessWidget {
         //-----------------Image -----------------
         Image.asset(
           imagePath,
-          height: 122,
-          width: 177,
+          height: 122.h,
+          width: 177.w,
           fit: BoxFit.cover,
         ),
 

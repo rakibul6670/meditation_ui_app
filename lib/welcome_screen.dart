@@ -16,14 +16,16 @@ class WelcomeScreen extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/images/welcome_background.png")),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+              image: AssetImage("assets/images/welcome_background.png")),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
 
-              SizedBox(height: 77.h,),
+              SizedBox(height: 155.h,),
               //===================== Title =============
               Text("Wecome to Sleep",style: TextStyle(
                 fontSize: 30.sp,
@@ -55,6 +57,8 @@ class WelcomeScreen extends StatelessWidget {
                   },
                   buttonName:"Get Started"
               ),
+
+             Spacer(),
 
 
             ],

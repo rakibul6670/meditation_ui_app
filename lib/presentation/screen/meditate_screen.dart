@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/data/dummeyData/meditation_image_list.dart';
 import 'package:meditation_ui_app/presentation/widgets/grid_view_stagger_section.dart';
@@ -60,7 +61,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
             AppSpacing.v34,
 
             SizedBox(
-              height: 92,
+              height: 92.h,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemCount: tabList.length,
@@ -81,7 +82,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return SizedBox(width: 20);
+                  return SizedBox(width: 20.w);
                 },
               ),
             ),
@@ -98,8 +99,8 @@ class _MeditateScreenState extends State<MeditateScreen> {
                         //===================== Banner Container ============
                         Image.asset(
                           AssetsImagesPath.banner,
-                          height: 95,
-                          width: 374,
+                          height: 95.h,
+                          width: 374.w,
                         ),
 
                         AppSpacing.v25,
@@ -108,6 +109,8 @@ class _MeditateScreenState extends State<MeditateScreen> {
                           bgColor: Colors.transparent,
                           boxFit: BoxFit.cover,
                         ),
+
+                        SizedBox(height: 20.h,)
                       ],
                     ),
                   ),

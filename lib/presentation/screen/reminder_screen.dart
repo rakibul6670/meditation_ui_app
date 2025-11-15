@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
@@ -30,48 +31,53 @@ class _ReminderScreenState extends State<ReminderScreen> {
       backgroundColor: Colors.white,
 
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AppSpacing.v82,
-                //==================== Title =================
-                Text(
-                  "What time would you \n like to meditate?",
-                  style: textTheme.headlineSmall!.copyWith(
-                    fontFamily: "Inter",
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
-                  ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // AppSpacing.v82,
+              SizedBox(height: 22.h,),
+              //==================== Title =================
+              Text(
+                "What time would you \n like to meditate?",
+                style: TextStyle(
+                  fontFamily: "Inter",
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize:24.sp,
+                ),
+              ),
+
+             // AppSpacing.v15,
+              SizedBox(height: 15.h,),
+
+              //================== Subtitle ================
+              Text(
+                "Any time you can choose but We recommend \n first thing in th morning.",
+                style: TextStyle(
+                  fontFamily: "Inter",
+                  fontWeight: FontWeight.w300,
+                  color: Color(0xffA1A4B2),
+                  fontSize:16.sp,
+                )
+              ),
+
+             // AppSpacing.v30,
+              SizedBox(height: 39.h,),
+
+              //================ Reminder box=================================
+              Container(
+                height: 212.h,
+                width: screenSize.width,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.r),
+                  color: Color(0xffF5F5F9),
                 ),
 
-                AppSpacing.v15,
-
-                //================== Subtitle ================
-                Text(
-                  "Any time you can choose but We recommend \n first thing in th morning.",
-                  style: textTheme.titleMedium!.copyWith(
-                    color: Color(0xffA1A4B2),
-                  ),
-                ),
-
-                AppSpacing.v30,
-
-                //================ Reminder box=================================
-                Container(
-                  // pading 12
-                  height: 212,
-                  width: screenSize.width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color(0xffF5F5F9),
-                  ),
-
+                child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       //  Divider(color: Colors.white),
@@ -80,22 +86,22 @@ class _ReminderScreenState extends State<ReminderScreen> {
                         is24HourMode: false,
                         normalTextStyle: TextStyle(
                           color: Color(0xffA1A4B2),
-                          fontSize: 24,
+                          fontSize: 24.sp,
                           fontFamily: "HelveticaNeue",
                           fontWeight: FontWeight.w400,
                         ),
                         highlightedTextStyle: TextStyle(
                           color: Color(0xff263238),
-                          fontSize: 24,
+                          fontSize: 24.sp,
                           fontFamily: "HelveticaNeue",
                           fontWeight: FontWeight.w700,
                         ),
 
-                        itemHeight: 60,
-                        spacing: 40,
+                        itemHeight: 50.h,
+                        spacing: 34.w,
 
                         isForce2Digits: true,
-                        itemWidth: 50,
+                        itemWidth: 40.w,
                         onTimeChange: (time) {
                           setState(() {
                             _time = time;
@@ -107,78 +113,85 @@ class _ReminderScreenState extends State<ReminderScreen> {
                     ],
                   ),
                 ),
+              ),
 
-                AppSpacing.v30,
-                // -------------- Witch day would you like to meditate ------------
-                Text(
-                  "What time would you \n like to meditate?",
-                  style: textTheme.headlineSmall!.copyWith(
-                    fontFamily: "Inter",
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
+              //AppSpacing.v30,
+              SizedBox(height: 30.h,),
+              // -------------- Witch day would you like to meditate ------------
+              Text(
+                "What time would you \n like to meditate?",
+                style: TextStyle(
+                  fontFamily: "Inter",
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 24.sp
+                ),
+              ),
+             // AppSpacing.v15,
+              SizedBox(height: 15.h,),
+              //================ Subtitle ================
+              Text(
+                "Every is best,but we recommend picking\n at least five.",
+
+                style: textTheme.titleMedium!.copyWith(
+                  color: Color(0xffA1A4B2),
+                ),
+              ),
+              //AppSpacing.v40,
+              SizedBox(height: 40.h,),
+              //======================= Day Select =========================
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 10.h,
+                runSpacing: 10.h,
+                children: List.generate(
+                  selected.length,
+                  (index) => DaySelectContainer(
+                    onTap: () {
+                      setState(() {
+                        selected[index] = !selected[index];
+                      });
+                    },
+                    dayName: days[index],
+                    isSelected: selected[index],
                   ),
                 ),
-                AppSpacing.v15,
-                //================ Subtitle ================
-                Text(
-                  "Every is best,but we recommend picking\n at least five.",
+              ),
 
-                  style: textTheme.titleMedium!.copyWith(
-                    color: Color(0xffA1A4B2),
-                  ),
+              //AppSpacing.v57,
+              SizedBox(height: 57.h,),
+
+              //====================== Save Button ======================
+              CustomElevatedButton(
+                onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  AppRoutes.dashboardScreen,
+                  (predicate) => false,
                 ),
-                AppSpacing.v40,
+                buttonName: "Save",
+              ),
 
-                //======================= Day Select =========================
-                Wrap(
-                  alignment: WrapAlignment.center,
-                  spacing: 10,
-                  runSpacing: 10,
-                  children: List.generate(
-                    selected.length,
-                    (index) => DaySelectContainer(
-                      onTap: () {
-                        setState(() {
-                          selected[index] = !selected[index];
-                        });
-                      },
-                      dayName: days[index],
-                      isSelected: selected[index],
+              //========================= No Thanks Button ================
+              //AppSpacing.v20,
+              SizedBox(height: 20.h,),
+
+              Center(
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    "No THANKS",
+                    style: textTheme.titleSmall!.copyWith(
+                      color: Colors.black,
                     ),
                   ),
                 ),
+              ),
 
-                AppSpacing.v57,
-
-                //====================== Save Button ======================
-                CustomElevatedButton(
-                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    AppRoutes.dashboardScreen,
-                    (predicate) => false,
-                  ),
-                  buttonName: "Save",
-                ),
-
-                //========================= No Thanks Button ================
-                AppSpacing.v20,
-
-                Center(
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: Text(
-                      "No THANKS",
-                      style: textTheme.titleSmall!.copyWith(
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-
-                //=============== space ===============
-                AppSpacing.v60,
-              ],
-            ),
+              //=============== space ===============
+              Spacer()
+             //AppSpacing.v60,
+              //SizedBox(height: 60.h,),
+            ],
           ),
         ),
       ),

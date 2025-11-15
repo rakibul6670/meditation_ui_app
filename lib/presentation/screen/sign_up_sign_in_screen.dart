@@ -50,15 +50,18 @@ class _SignUpSignInScreenState extends State<SignUpSignInScreen> {
               SizedBox(height: 78.h),
 
               //----------------------Sign up Button -------------
-              CustomElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    AppRoutes.signupScreen,
-                    (route) => false,
-                  );
-                },
-                buttonName: "Sign up",
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 20.w),
+                child: CustomElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      AppRoutes.signupScreen,
+                      (route) => false,
+                    );
+                  },
+                  buttonName: "Sign up",
+                ),
               ),
 
               //AppSpacing.h20,

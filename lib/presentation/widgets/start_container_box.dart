@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StartContainerBox extends StatelessWidget {
   final String iconImagePath;
@@ -19,10 +20,10 @@ class StartContainerBox extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
 
     return  Container(
-      height: 210,
-      width: screenSize.width * .42,
+      height: 210.h,
+      width: screenSize.width * .42.w,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         color: color??Color(0xff8e97fd),
       ),
       child: Stack(
@@ -32,31 +33,31 @@ class StartContainerBox extends StatelessWidget {
             right: 0,
             child: Image.asset(
              iconImagePath,
-              width: 120,
-              height: 105,
+              width: 120.w,
+              height: 105.h,
               fit: BoxFit.cover,
             ),
           ),
 
-          Positioned(top: 85, left: 15, child: Text(title,style: textTheme.bodyLarge!.copyWith(
+          Positioned(top: 85.h, left: 15.w, child: Text(title,style: textTheme.bodyLarge!.copyWith(
             color: titleColor,
           ),)),
 
-          Positioned(top: 112, left: 15, child: Text(subTile,style: textTheme.bodySmall!.copyWith(
+          Positioned(top: 112.h, left: 15.w, child: Text(subTile,style: textTheme.bodySmall!.copyWith(
             color: subTitleColor,
           ),)),
-          Positioned(top: 172, left: 15, child: Text(time,style: textTheme.bodySmall!.copyWith(
+          Positioned(top: 172.h, left: 15.w, child: Text(time,style: textTheme.bodySmall!.copyWith(
             color: timeColor,
           ),)),
 
           Positioned(
-            top: 160,
-            right: 15,
-            bottom: 15,
+            top: 160.h,
+            right: 15.w,
+            bottom: 15.h,
             child: Image.asset(
               buttonImagePath,
-              width: 70,
-              height: 35,
+              width: 70.w,
+              height: 35.h,
               fit: BoxFit.cover,
             ),
           ),

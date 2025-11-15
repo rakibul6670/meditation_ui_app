@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meditation_ui_app/presentation/screen/home_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/meditate_screen.dart';
+import 'package:meditation_ui_app/presentation/screen/profile_screen.dart';
 import 'package:meditation_ui_app/presentation/screen/sleep_screen.dart';
 
 import 'package:meditation_ui_app/presentation/widgets/bottom_nav_bar_container.dart';
-
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -15,9 +15,8 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-
   //===============current index =============================================
-   int _currentIndex = 0;
+  int _currentIndex = 0;
   //================ Selected Screen ==========================================
   int selectedScreen = 0;
 
@@ -26,13 +25,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
     SleepScreen(),
     MeditateScreen(),
     SleepScreen(),
-    SleepScreen(),
+    ProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       //===========================Body Section ============================
       body: screen[_currentIndex],
@@ -40,17 +37,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
       //========================== Bottom Navigation Bar ======================
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: _currentIndex==0?Colors.white: Color(0xff03174d),
-        selectedItemColor: _currentIndex==0?Color(0xff8E97FD):Color(0xffE6E7F2),
-        unselectedItemColor: _currentIndex==0?Color(0xffA0A3B1):Color(0xff98A1BD),
+        backgroundColor: _currentIndex == 0 ? Colors.white : Color(0xff03174d),
+        selectedItemColor:
+            _currentIndex == 0 ? Color(0xff8E97FD) : Color(0xffE6E7F2),
+        unselectedItemColor:
+            _currentIndex == 0 ? Color(0xffA0A3B1) : Color(0xff98A1BD),
         currentIndex: _currentIndex,
-        onTap: (value){
+        onTap: (value) {
           _currentIndex = value;
-          setState(() {
-
-          });
+          setState(() {});
         },
-
         items: [
           BottomNavigationBarItem(
             icon: BottomNavBarContainer(
@@ -60,7 +56,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             label: "Home",
           ),
-
           BottomNavigationBarItem(
             icon: BottomNavBarContainer(
               icon: FontAwesomeIcons.moon,
@@ -69,7 +64,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             label: "Sleep",
           ),
-
           BottomNavigationBarItem(
             icon: BottomNavBarContainer(
               icon: FontAwesomeIcons.person,
@@ -78,7 +72,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             label: "Meditate",
           ),
-
           BottomNavigationBarItem(
             icon: BottomNavBarContainer(
               icon: FontAwesomeIcons.music,
@@ -95,12 +88,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             label: "Afsar",
           ),
-
-
-
         ],
       ),
-
     );
   }
 }

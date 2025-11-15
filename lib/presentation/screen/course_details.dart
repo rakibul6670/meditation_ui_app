@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/theme/app_spacing.dart';
@@ -35,7 +36,7 @@ class _CourseDetailsState extends State<CourseDetails> {
               ),
 
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

@@ -13,6 +13,9 @@ class CustomElevatedButton extends StatelessWidget {
       height: 63.h,
       width: 374.w,
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color(0xff8E97FD)
+        ),
         onPressed: onPressed,
          child: Text(buttonName)
          ),

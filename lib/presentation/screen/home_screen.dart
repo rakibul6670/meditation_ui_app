@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meditation_ui_app/core/constants/assets_icons_path.dart';
 import 'package:meditation_ui_app/core/constants/assets_images_path.dart';
 import 'package:meditation_ui_app/core/routes/app_routes.dart';
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -31,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                 //===================== Title ==================
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  spacing: 10,
+                  spacing: 10.h,
                   children: [
                     Text("Silent",style: textTheme.titleMedium!.copyWith(
                   color: Colors.black,
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                 AppSpacing.v40,
                 //====================Welcome user ===================
                 Text("Good Morning ,Afsar",style: textTheme.headlineMedium!.copyWith(
-                  color: Colors.black,
+                  color: Color(0xffA1A4B2),
                 ),),
                 AppSpacing.v10,
           
@@ -95,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                 AppSpacing.v20,
           
                 SizedBox(
-                  height: 200,
+                  height: 200.h,
                   child: ListView.separated(
                     // shrinkWrap: true,
                     // physics: NeverScrollableScrollPhysics(),
